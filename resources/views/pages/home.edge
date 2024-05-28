@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antri Yuk</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .navbar {
+            background: #123545;
+            color: white;
+            padding: 1rem 4rem;
+            z-index: 1000;
+        }
+
+        #navbarSupportedContent > ul > li:nth-child(n) > a {
+            color: white;
+            font-size: 1.1rem;
+            padding: 0 0.8rem;
+        }
+
+        #navbarSupportedContent > ul > li:nth-child(n) > a:hover,
+        #navbarSupportedContent > ul > li:nth-child(n) > a:active {
+            color: #1aabef;
+        }
+
+        #brandnavbar {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .mid {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+        }
+
+        .hero {
+            margin-top: 15%;
+            position: relative;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+            <a class="navbar-brand" href="#" id="brandnavbar"><b>KLINIK 1/2 SEHAT</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Apa ini?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fitur">Fitur</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sisi">Sisi</a>
+                    </li>
+                </ul>
+                <a href="/login" class="btn btn-outline-primary">Login Admin</a>
+            </div>
+        </nav>
+
+        <div class="mid" style="background: #1aabef; height: 400px; padding-bottom: 50px;">
+            <div class="hero">
+                <h2 class="text-light display-4">Metode Antri Menggunakan Aplikasi</h2>
+                <p class="text-light mx-auto">Antrian dapat teratur dan terorganisir secara sistem</p>
+                <a href="antrians" class="btn" style="color: white; background: #123545; border-radius: 7px;">Ambil Antrian</a>
+                <a href="monitoring" class="btn" style="color: white; background: #123545; border-radius: 7px;">Monitor Mode</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about" id="about" style="background: #1aabef">
+        <div class="row align-items-center container mx-auto">
+            <div class="text col-lg-6 col-md-6 col-12 w-50 px-5">
+                <h1 class="text-light display-9">Sistem Ngantri</h1>
+                <p class="text-light">Selamat datang di Klinik Kami. Untuk memberikan layanan yang lebih efisien dan nyaman, kami menerapkan sistem antrian yang sederhana dan mudah digunakan. Pertama, silakan menuju ke mesin antrian yang tersedia di area pendaftaran dan tekan tombol pada layar untuk mengambil nomor antrian Anda. Setelah itu, nomor antrian Anda akan dicetak secara otomatis. Pastikan Anda membawa cetakan nomor antrian yang keluar dari mesin tersebut. Kemudian, harap menuju ke loket pendaftaran dan serahkan cetakan tersebut kepada petugas loket. Petugas akan memanggil nomor Anda sesuai dengan urutan antrian. Dengan mengikuti langkah-langkah ini, Anda membantu kami memberikan layanan yang lebih cepat dan teratur. Pastikan untuk selalu membawa cetakan nomor antrian Anda sampai Anda selesai mendapatkan pelayanan. Jika Anda memiliki pertanyaan atau memerlukan bantuan, jangan ragu untuk bertanya kepada petugas kami yang ramah. Terima kasih telah mempercayakan pelayanan kesehatan Anda kepada kami. Semoga hari Anda menyenangkan.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 w-50 px-5 pb-5">
+                <img class="img-fluid mx-auto" style="width: 80%;" src="http://localhost/antriyuk/node_module/assets/gmb1.png" alt="Gambar Klinik">
+            </div>
+        </div>
+    </section>
+
+    <section class="fitur" id="fitur" style="background: white;">
+        <div class="row align-items-center container mt-5 mx-auto py-5">
+            <div class="col-lg-6 col-md-6 col-12 w-100 h-100 px-5 py-5">
+                <img class="img-fluid" src="http://localhost/antriyuk/node_module/assets/gmb2.png" alt="Gambar Fitur">
+            </div>
+            <div class="text col-lg-6 col-md-6 col-12 w-100 h-100 px-5">
+                <h1 class="text-dark display-6">Fitur dan Kelebihan</h1>
+                <ul style="list-style-type: disc; color: black;">
+                    <li class="text-dark display-9">Antrian tidak mungkin terselak</li>
+                    <li class="text-dark display-9">Berurutan dan adil untuk sesama pengantri</li>
+                    <li class="text-dark display-9">Data antrian tersimpan di Database</li>
+                    <li class="text-dark display-9">Akurat dan Cepat</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="sisi" id="sisi" style="background: #1aabef;">
+        <div class="row align-items-center justify-content-center container mx-auto py-5">
+            <div class="col-12">
+                <h2 class="text-light" style="text-align: center;">Sisi</h2>
+                <hr style="background-color: white;">
+            </div>
+            <div class="col-lg-3 col-md-3 col-12 m-1 p-2" style="border-radius: 7px; text-align: center; background-color: white;">
+                <img src="http://localhost/antriyuk/node_module/assets/gmbcard1.png" class="img-fluid" alt="Gambar Get Side">
+                <h5>Get Side</h5>
+                <p>Sisi yang berfungsi sebagai pembuat, dan pencetak karcis dan data antrian</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-12 m-1 p-2" style="border-radius: 7px; text-align: center; background-color: white;">
+                <img src="http://localhost/antriyuk/node_module/assets/gmbcard2.png" class="img-fluid" alt="Gambar Monitor Side">
+                <h5>Monitor Side</h5>
+                <p>Sisi yang berfungsi untuk menampilkan antrian yang berlangsung, dan selanjutnya</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-12 m-1 p-2" style="border-radius: 7px; text-align: center; background-color: white;">
+                <img src="http://localhost/antriyuk/node_module/assets/gmbcard3.png" class="img-fluid" alt="Gambar Admin Side">
+                <h5>Admin Side</h5>
+                <p>Sisi yang memanage seluruh antrian, dan menentukan antrian yang mendapatkan giliran</p>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background-color: black; color: white;">
+        <div class="row">
+            <div class="col-md-12 py-5">
+                <div class="text-center py-3">© 2024 Copyright
+                    <a href="#" style="text-decoration: none; color: white;"> Pembuat: PT. 1/2 SEHAT</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

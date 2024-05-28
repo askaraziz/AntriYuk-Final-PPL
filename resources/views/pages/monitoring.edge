@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antri Yuk</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Pastikan path asset CSS sesuai dengan struktur project Anda -->
+</head>
+<body  data-spy="scroll" data-target="#navbarSupportedContent">
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="/" id="brandnavbar"><b>PT. 1/2 SEHAT</b></a>
+    </nav>
+</header>
+
+<div class="container-fluid" id="about" style="background: #1aabef; height: 1000px;">
+
+    <div class="row" style="color: white; text-align: center;">
+        <div class="col-12 mt-3">
+            <h2><b></b></h2>
+        </div>
+        <div class="col-12">
+            <h3><b></b></h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="mt-3 col-lg-6 col-12 " style="">
+            <center>
+                <div class="shadow-sm pt-5 pb-5" style="width: 100%; height: 300px; background-color: #123545; border-radius: 10px;">
+                    <h3 class="text-light"><b>Silahkan Ke Loket : A1, Untuk Antrian ke </b></h3>
+                    <br>
+                    <h1 class="text-light display-2"><b id='antrian_sekarang'>{{currentAntrian.noAntrian}}</b></h1>
+                    <br>
+                    <font color="white" size="+2"><i>Jika tidak ada, maka akan dilanjutkan ke antrian selanjutnya</i></font>
+                </div>
+            </center>
+        </div>
+
+        <div class="col-lg-6 col-12 mt-3 pl-5">
+            <font color="white"><h3>Antrian Selanjutnya : </h3></font>
+            <table style="color: white;" class="table table-hover" id="tabel_data_antrian">
+                <tr>
+                    <td><b>NO Antrian</b></td>
+                    <td><b>Waktu</b></td>
+                </tr>
+                
+                @each(antrian in antrianLeft)
+                    <tr>
+                        <td>{{ antrian.noAntrian }}</td>
+                        <td>{{ antrian.createdAt }}</td>
+                    </tr>
+                @end
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    var antrian_sebelumnya;
+    function selesai() {
+        setTimeout(function() {
+            update();
+            selesai();
+        }, 200);
+    }
+
+    function update() {
+        // Memperbarui nomor antrian saat ini
+        document.getElementById(`antrian_sekarang`).innerHTML = '{{ currentAntrian.noAntrian }}';
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
